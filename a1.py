@@ -1,5 +1,4 @@
 def shorten_text(text):
-
     while '(' in text and ')' in text:
         left = text.rfind('(')
         right = text.find(')', left)
@@ -10,8 +9,12 @@ def shorten_text(text):
 
 
     text = ' '.join(text.split())
-    return text
 
+
+    for ch in '.!,?:;':
+        text = text.replace(' ' + ch, ch)
+
+    return text
 
 
 source = 'Падал (куда он там падал) прошлогодний (значит очень старый) снег (а почему не дождь) () (()).'
