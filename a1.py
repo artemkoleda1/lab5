@@ -8,3 +8,12 @@ def shorten_text(text):
 
         text = text.replace(text[left:right + 1], '')
 
+
+    text = ' '.join(text.split())
+    return text
+
+
+
+source = 'Падал (куда он там падал) прошлогодний (значит очень старый) снег (а почему не дождь) () (()).'
+result = shorten_text(source)
+print(result)
